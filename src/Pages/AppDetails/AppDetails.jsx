@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router";
 import download from "../../assets/icon-downloads.png";
 import ratigImg from "../../assets/icon-ratings.png";
 import reviewIcon from "../../assets/icon-review.png";
+import { addToStoreDB } from "../../utility/addToDB";
+import { toast } from "react-toastify";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -23,6 +25,16 @@ const AppDetails = () => {
     description,
   } = singleApp;
   console.log(singleApp);
+  const [installed, setInstalled] = useState(false);
+  const handleInstall = (id) => {
+    addToStoreDB(id);
+    if (!installed) {
+      setInstalled(true);
+      toast.success("App installed");
+    } else {
+      toast.info("already instlled");
+    }
+  };
 
   return (
     <div className="max-w-11/12 mx-auto my-10">
@@ -58,13 +70,17 @@ const AppDetails = () => {
                 </div>
               </div>
 
-              <Link className="bg-[#00D390] text-white px-5 py-4 rounded-lg">
-                Install Now <span>({size})</span>
+              <Link
+                onClick={() => handleInstall(id)}
+                className={`px-5 py-4 rounded-lg text-white font-semibold ${
+                  installed ? "bg-gray-300" : "bg-[#00D390]"
+                }`}
+              >
+                {installed ? "Installed" : `Install Now (${size} MB)`}
               </Link>
             </div>
           </div>
         </div>
-       
       </div>
       <div className="mt-20">
         <h2 className="font-bold">Description</h2>
