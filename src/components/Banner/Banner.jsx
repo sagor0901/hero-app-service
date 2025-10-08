@@ -49,7 +49,7 @@ const Banner = () => {
             </div>
             <div className="space-y-2">
               <p className="text-gray-300 ">Total Reviews</p>
-              <p className="text-6xl font-bold text-white">906k
+              <p className="text-6xl font-bold text-white">906K
               </p>
               <p className="text-gray-300 ">46% more than last month </p>
             </div><div className="space-y-2">
