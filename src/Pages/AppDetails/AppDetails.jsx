@@ -3,6 +3,7 @@ import { Link, useLoaderData, useParams } from "react-router";
 import download from "../../assets/icon-downloads.png";
 import ratigImg from "../../assets/icon-ratings.png";
 import reviewIcon from "../../assets/icon-review.png";
+
 const AppDetails = () => {
   const { id } = useParams();
   const appId = parseInt(id);
@@ -10,8 +11,17 @@ const AppDetails = () => {
   const singleApp = data.find((app) => app.id === appId);
   console.log(singleApp);
 
-  const { title, image, companyName, downloads, reviews, size, ratingAvg } =
-    singleApp;
+  const {
+    title,
+    image,
+    companyName,
+    downloads,
+    reviews,
+    size,
+    ratingAvg,
+
+    description,
+  } = singleApp;
   console.log(singleApp);
 
   return (
@@ -32,28 +42,33 @@ const AppDetails = () => {
             <div className="">
               <div className="flex gap-4 justify-start  my-4">
                 <div className=" px-3 py-2 rounded-lg space-y-2 ">
-                <img className="h-[30px]" src={download} alt="" />
-                <p className="text-gray-400">Downloads</p>
-                <p className="font-bold text-5xl">{downloads}</p>
-              </div>
+                  <img className="h-[30px]" src={download} alt="" />
+                  <p className="text-gray-400">Downloads</p>
+                  <p className="font-bold text-5xl">{downloads}</p>
+                </div>
                 <div className=" px-3 py-2 rounded-lg space-y-2">
-                <img className="h-[30px]" src={ratigImg} alt="" />
-                <p className="text-gray-400">Downloads</p>
-                <p className="font-bold text-5xl">{ratingAvg}</p>
-              </div>
+                  <img className="h-[30px]" src={ratigImg} alt="" />
+                  <p className="text-gray-400">Downloads</p>
+                  <p className="font-bold text-5xl">{ratingAvg}</p>
+                </div>
                 <div className=" px-3 py-2 rounded-lg space-y-2">
-                <img className="h-[30px]" src={reviewIcon} alt="" />
-                <p className="text-gray-400">Downloads</p>
-                <p className="font-bold text-5xl">{reviews}</p>
+                  <img className="h-[30px]" src={reviewIcon} alt="" />
+                  <p className="text-gray-400">Downloads</p>
+                  <p className="font-bold text-5xl">{reviews}</p>
+                </div>
               </div>
-              </div>
-              
-              <Link className="bg-[#00D390] text-white px-5 py-4 rounded-lg" >
-              Install Now <span>({size})</span>
+
+              <Link className="bg-[#00D390] text-white px-5 py-4 rounded-lg">
+                Install Now <span>({size})</span>
               </Link>
             </div>
           </div>
         </div>
+       
+      </div>
+      <div className="mt-20">
+        <h2 className="font-bold">Description</h2>
+        <p className="text-gray-400"> {description} </p>
       </div>
     </div>
   );
