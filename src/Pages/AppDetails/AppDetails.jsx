@@ -10,9 +10,9 @@ const AppDetails = () => {
   const singleApp = data.find((app) => app.id === appId);
   console.log(singleApp);
 
-  const { title, image, companyName, downloads, reviews, size, ratings } =
+  const { title, image, companyName, downloads, reviews, size, ratingAvg } =
     singleApp;
-  console.log(ratings);
+  console.log(singleApp);
 
   return (
     <div className="max-w-11/12 mx-auto my-10">
@@ -39,7 +39,7 @@ const AppDetails = () => {
                 <div className=" px-3 py-2 rounded-lg space-y-2">
                 <img className="h-[30px]" src={ratigImg} alt="" />
                 <p className="text-gray-400">Downloads</p>
-                <p className="font-bold text-5xl">{}</p>
+                <p className="font-bold text-5xl">{ratingAvg}</p>
               </div>
                 <div className=" px-3 py-2 rounded-lg space-y-2">
                 <img className="h-[30px]" src={reviewIcon} alt="" />

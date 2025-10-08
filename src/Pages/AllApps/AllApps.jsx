@@ -1,9 +1,9 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense} from "react";
 import SingleApp from "../SingleApp/SingleApp";
 import { Link } from "react-router";
 
 const AllApps = ({ data }) => {
-  //   const [allApps, setAllApps] = useState([]);
+
   const fetauredApps = data.slice(0, 8);
   return (
     <div className="mx-auto w-11/12">
