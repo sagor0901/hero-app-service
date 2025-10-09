@@ -11,7 +11,7 @@ const AppDetails = () => {
   const appId = parseInt(id);
   const data = useLoaderData();
   const singleApp = data.find((app) => app.id === appId);
-  console.log(singleApp);
+//   console.log(singleApp);
 
   const {
     title,
@@ -24,7 +24,7 @@ const AppDetails = () => {
 
     description,
   } = singleApp;
-  console.log(singleApp);
+//   console.log(singleApp);
   const [installed, setInstalled] = useState(false);
   const handleInstall = (id) => {
     addToStoreDB(id);

@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { useLoaderData } from "react-router";
+import { getStoredApp } from "../../utility/addToDB";
+import InstalledCard from "./InstalledCard";
 
 const Installation = () => {
+    const [installedApps, setInstalledApps]=useState([])
+    const data = useLoaderData()
+    console.log(data);
+    
+
+ useEffect(()=>{
+    const storedAppData =getStoredApp()
+    console.log(storedAppData);
+    const convertedStoredApp = storedAppData.map(id=>parseInt(id))
+    console.log(convertedStoredApp);
+    const myInstallList = data.filter(app=>convertedStoredApp.includes(app.id))
+    setInstalledApps(myInstallList)
+
+    
+    
+    
+    
+ },[data])
   return (
     <div className="max-w-11/12 mx-auto">
       <div className="text-center  my-14 space-y-2">
@@ -12,7 +33,7 @@ const Installation = () => {
       </div>
       <div className="flex justify-between items-center">
         <h2>
-          <span>({})</span> Apps Found
+          <span>({installedApps.length})</span> Apps Found
         </h2>
 
         <div className="dropdown  dropdown-bottom dropdown-center">
@@ -34,7 +55,9 @@ const Installation = () => {
       </div>
       {/* install app  */}
         <div>
-            card
+            {
+                installedApps.map(app=><InstalledCard key={app.id} app={app}></InstalledCard>)
+            }
         </div>
     </div>
   );

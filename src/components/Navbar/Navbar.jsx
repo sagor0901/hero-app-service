@@ -63,7 +63,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 ">{links}</ul>
         </div>
         <div className="navbar-end">
-          <Link className="flex items-center gap-1 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] p-3 rounded-lg text-white ">
+          <Link to='https://github.com/sagor0901/hero-app-service' className="flex items-center gap-1 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] p-3 rounded-lg text-white ">
             <img src={github} alt="" />
             <p className="font-bold text-">Contribute</p>
           </Link>

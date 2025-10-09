@@ -13,11 +13,11 @@ const getStoredApp = () => {
 const addToStoreDB = (id) => {
   const storedAppData = getStoredApp();
 
-  if (storedAppData.includes(id)) {
+  if (!storedAppData.includes(id)) {
     storedAppData.push(id);
     const databaseData = JSON.stringify(storedAppData);
     localStorage.setItem("readList", databaseData);
   }
 };
 
-export { addToStoreDB };
+export { addToStoreDB, getStoredApp };
