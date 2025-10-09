@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link} from "react-router";
 import logo from "../../assets/logo.png";
-import { Link } from 'react-router';
 
 const Footer = () => {
     return (
@@ -15,7 +15,7 @@ const Footer = () => {
     <p>
       HERO.IO Industries Ltd.
       <br />
-      Providing reliable tech since 2017-2025 (still running)
+      Providing reliable tech since 2018
     </p>
   </aside>
   <nav>

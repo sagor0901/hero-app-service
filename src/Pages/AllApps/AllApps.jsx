@@ -28,7 +28,7 @@ const AllApps = ({ data }) => {
       <div className="flex justify-center my-5">
         <Link
           to="/showAllApps"
-          className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] px-12 py-7 text-white text-lg"
+          className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] px-12 py-6 text-white font-bold"
         >
           Show all
         </Link>

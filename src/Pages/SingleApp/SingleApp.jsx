@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import download from "../../assets/icon-downloads.png";
 import rating from "../../assets/icon-ratings.png";
 const SingleApp = ({ app }) => {
-  console.log(app);
+
   const { image, title, companyName,id } = app;
 
   return (

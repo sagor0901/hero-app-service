@@ -7,14 +7,14 @@ import InstalledCard from "./InstalledCard";
 const Installation = () => {
     const [installedApps, setInstalledApps]=useState([])
     const data = useLoaderData()
-    console.log(data);
+
     
 
  useEffect(()=>{
     const storedAppData =getStoredApp()
-    console.log(storedAppData);
+
     const convertedStoredApp = storedAppData.map(id=>parseInt(id))
-    console.log(convertedStoredApp);
+
     const myInstallList = data.filter(app=>convertedStoredApp.includes(app.id))
     setInstalledApps(myInstallList)
  },[data])
