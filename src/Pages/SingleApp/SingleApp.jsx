@@ -13,14 +13,14 @@ const SingleApp = ({ app }) => {
           <img className="rounded-lg w-full h-[300px]" src={image} />
         </figure>
         <div className=" p-4">
-          <h2 className="mb-3">
+          <h2 className="mb-3 font-bold text-lg">
             {title} <span>{companyName}</span>{" "}
           </h2>
 
           <div className="flex justify-between items-center ">
             <div className="bg-[#F1F5E8] flex px-3 py-2 items-center gap-2 rounded-lg">
               <img className="h-[18px]" src={download} alt="" />
-              <p className="text-[#00D390]">9M</p>
+              <p className="text-[#00D390] ">9M</p>
             </div>
             <div className="bg-[#FFF0E1] flex px-3 py-2 items-center gap-2 rounded-lg">
               <img className="h-[20px]" src={rating} alt="" />

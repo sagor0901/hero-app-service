@@ -23,10 +23,10 @@ const Banner = () => {
         </p>
         <div className="flex items-center gap-3">
           <Link to='https://play.google.com/store/games?hl=en' className="flex items-center gap-2">
-            <img src={playStore} alt="" /> <span>Google Play</span>
+            <img src={playStore} alt="" /> <span className="font-semibold">Google Play</span>
           </Link>
           <Link to='https://www.apple.com/app-store/' className="flex items-center gap-2">
-            <img src={app} alt="" /> <span>App Store</span>
+            <img src={app} alt="" /> <span className="font-semibold">App Store</span>
           </Link>
         </div>
       </div>

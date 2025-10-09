@@ -11,20 +11,20 @@ const InstalledCard = ({ app, handleUninstall }) => {
         <div className="flex justify-between items-center">
           <div className="flex items-center ">
             <img className="h-[60px] rounded-lg" src={image} alt="" />
-            <div className="ml-2">
+            <div className="ml-5">
               <h4 className="font-semibold ">
                 {title}: {companyName}{" "}
               </h4>
               <div className="flex items-center gap-5">
-                <div className="flex gap-1">
+                <div className="hidden md:flex gap-1">
                   <img className="h-[20px]" src={download} alt="" />
                   <p className="text-[#00D390]">{downloads}</p>
                 </div>
-                <div className="flex gap-1">
+                <div className="hidden md:flex gap-1">
                   <img className="h-[20px]" src={ratigImg} alt="" />
                   <p className="text-[#FF8811]">{ratingAvg}</p>
                 </div>
-                <p className="text-gray-400">{size}MB</p>
+                <p className="text-gray-400">{size} MB</p>
               </div>
             </div>
           </div>

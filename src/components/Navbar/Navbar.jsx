@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="flex w-11/12 justify-between mx-auto items-center">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -59,8 +59,8 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex ">
-          <ul className="menu menu-horizontal px-1 ">{links}</ul>
+        <div className="navbar-center hidden  md:flex ">
+          <ul className="menu menu-horizontal flex items-center px-1 ">{links}</ul>
         </div>
         <div className="navbar-end">
           <Link to='https://github.com/sagor0901/hero-app-service' className="flex items-center gap-1 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] p-3 rounded-lg text-white ">
