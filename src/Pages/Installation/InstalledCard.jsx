@@ -11,7 +11,7 @@ const InstalledCard = ({ app,handleUninstall }) => {
     <div className="my-3">
       <div className="bg-white shadow-md p-2 rounded-lg ">
         <div className="flex justify-between items-center">
-          <div className="flex ">
+          <div className="flex items-center ">
             <img className="h-[60px] rounded-lg" src={image} alt="" />
             <div className="ml-2">
             <h4 className="font-semibold ">

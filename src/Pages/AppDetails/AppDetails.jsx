@@ -40,7 +40,7 @@ const AppDetails = () => {
     <div className="max-w-11/12 mx-auto my-10">
       <div>
         <div className=" flex flex-col md:flex-row gap-10  ">
-          <img className="h-[300px]" src={image} />
+          <img className="h-[300px] rounded-lg" src={image} />
           <div className="w-full">
             <div className=" border-b-1 border-gray-400 ">
               <h1 className="text-5xl font-bold">{title}</h1>
@@ -86,8 +86,8 @@ const AppDetails = () => {
           </div>
         </div>
       </div>
-      <div className="mt-20">
-        <h2 className="font-bold">Description</h2>
+      <div className="mt-20 border-t border-gray-400">
+        <h2 className="font-bold mt-5">Description</h2>
         <p className="text-gray-400"> {description} </p>
       </div>
     </div>

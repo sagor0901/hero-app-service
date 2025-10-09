@@ -9,7 +9,7 @@ const SingleApp = ({ app }) => {
     <Link to={`/appDetails/${id}`}>
     <div>
       <div className="card bg-base-100  shadow-sm  hover:scale-105 transition ease-in-out ">
-        <figure className="p-4 bg-[#e9e6e6]">
+        <figure className="p-4 bg-gray-200">
           <img className="rounded-lg w-full h-[300px]" src={image} />
         </figure>
         <div className=" p-4">
