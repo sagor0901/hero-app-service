@@ -17,12 +17,14 @@ const Installation = () => {
     console.log(convertedStoredApp);
     const myInstallList = data.filter(app=>convertedStoredApp.includes(app.id))
     setInstalledApps(myInstallList)
-
-    
-    
-    
-    
  },[data])
+
+ const handleUninstall = id =>{
+    const remainingApps = installedApps.filter(app=>app.id !==id)
+    setInstalledApps(remainingApps)
+    localStorage.setItem('readList', JSON.stringify(remainingApps.map(app=> app.id)))
+ }
+
   return (
     <div className="max-w-11/12 mx-auto">
       <div className="text-center  my-14 space-y-2">
@@ -32,7 +34,7 @@ const Installation = () => {
         </p>
       </div>
       <div className="flex justify-between items-center">
-        <h2>
+        <h2 className="text-2xl font-bold">
           <span>({installedApps.length})</span> Apps Found
         </h2>
 
@@ -56,7 +58,7 @@ const Installation = () => {
       {/* install app  */}
         <div>
             {
-                installedApps.map(app=><InstalledCard key={app.id} app={app}></InstalledCard>)
+                installedApps.map(app=><InstalledCard handleUninstall={handleUninstall} key={app.id} app={app}></InstalledCard>)
             }
         </div>
     </div>

@@ -11,7 +11,7 @@ const AppDetails = () => {
   const appId = parseInt(id);
   const data = useLoaderData();
   const singleApp = data.find((app) => app.id === appId);
-//   console.log(singleApp);
+  //   console.log(singleApp);
 
   const {
     title,
@@ -24,7 +24,7 @@ const AppDetails = () => {
 
     description,
   } = singleApp;
-//   console.log(singleApp);
+  //   console.log(singleApp);
   const [installed, setInstalled] = useState(false);
   const handleInstall = (id) => {
     addToStoreDB(id);
@@ -38,7 +38,7 @@ const AppDetails = () => {
 
   return (
     <div className="max-w-11/12 mx-auto my-10">
-      <div className="">
+      <div>
         <div className=" flex flex-col md:flex-row gap-10  ">
           <img className="h-[300px]" src={image} />
           <div className="w-full">
@@ -51,22 +51,26 @@ const AppDetails = () => {
                 </span>
               </p>
             </div>
-            <div className="">
-              <div className="flex gap-4 justify-start  my-4">
-                <div className=" px-3 py-2 rounded-lg space-y-2 ">
+            <div>
+              <div className="flex flex-col md:flex-row gap-4 justify-start  my-4">
+                <div className=" px-3 py-2 rounded-lg space-y-2  ">
                   <img className="h-[30px]" src={download} alt="" />
                   <p className="text-gray-400">Downloads</p>
-                  <p className="font-bold text-5xl">{downloads}</p>
+                  <p className="font-bold text-4xl   lg:text-5xl">
+                    {downloads}
+                  </p>
                 </div>
                 <div className=" px-3 py-2 rounded-lg space-y-2">
                   <img className="h-[30px]" src={ratigImg} alt="" />
                   <p className="text-gray-400">Downloads</p>
-                  <p className="font-bold text-5xl">{ratingAvg}</p>
+                  <p className="font-bold text-4xl   lg:text-5xl">
+                    {ratingAvg}
+                  </p>
                 </div>
                 <div className=" px-3 py-2 rounded-lg space-y-2">
                   <img className="h-[30px]" src={reviewIcon} alt="" />
                   <p className="text-gray-400">Downloads</p>
-                  <p className="font-bold text-5xl">{reviews}</p>
+                  <p className="font-bold text-4xl   lg:text-5xl">{reviews}</p>
                 </div>
               </div>
 
